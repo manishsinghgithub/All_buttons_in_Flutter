@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class FristPage extends StatefulWidget {
   @override
@@ -19,7 +20,13 @@ class _FristPageState extends State<FristPage> {
               foregroundColor: getColor(Colors.red, Colors.yellow),
               side: getBorder(Colors.black, Colors.red),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Fluttertoast.showToast(
+                  msg: 'Your balance is credited to the another Account',
+                  textColor: Colors.red,
+                  backgroundColor: Colors.green,
+                  fontSize: 18);
+            },
             child: Icon(
               Icons.star,
               size: 40,
